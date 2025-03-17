@@ -1,4 +1,5 @@
-import Sidebar from "@/components/Sidebar";
+import { ModeToggle } from "@/components/ModeToggle";
+import { Sidebar } from "@/components/Sidebar";
 import { Separator } from "@/components/ui/separator";
 import BreadcrumbHeader from "../../components/BreadcrumbHeader";
 
@@ -9,6 +10,9 @@ function Layout({ children }: { children: React.ReactNode }) {
       <div className="flex flex-col flex-1 min-h-screen">
         <header className="flex items-center justify-between px-6 py-4 h-[50px] container border-4 border-amber-500">
           <BreadcrumbHeader />
+          <div className="flex items-center gap-1">
+            <ModeToggle />
+          </div>
         </header>
         <Separator />
         <div className="overflow-auto border-4 border-amber-500">
